@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "rimraf dist && tsc",
-    "test": "jest --forceExit",
+    "test": "jest",
     "release": "semantic-release"
   },
   "devDependencies": {
@@ -72,9 +72,6 @@
       "js",
       "json"
     ],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
-    },
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
@@ -82,7 +79,7 @@
       "<rootDir>/src/**/*.ts"
     ],
     "testMatch": [
-      "<rootDir>/test/**/*.test.ts"
+      "<rootDir>/src/__tests__/*.test.ts"
     ],
     "testEnvironment": "node",
     "collectCoverage": true,
