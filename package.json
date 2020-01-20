@@ -2,39 +2,112 @@
   "name": "http-core-constants",
   "version": "0.0.1",
   "description": "http-core constants typescript/javascript version (from apache http-components:httpcore)",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/aquariuslt/http-core-constants",
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "apache",
+    "http-components",
+    "http-core",
+    "constants"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "test": "jest --forceExit",
+    "release": "semantic-release"
+  },
   "devDependencies": {
     "@types/jest": "^24.9.0",
     "@types/node": "^13.1.8",
     "jest": "^24.9.0",
     "ts-jest": "^24.3.0",
     "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.0",
+    "semantic-release": "^15.13.24"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint"
+    ],
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-member-accessibility": "off",
+      "@typescript-eslint/no-parameter-properties": "off",
+      "@typescript-eslint/interface-name-prefix": "off"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "arrowParens": "always",
+    "proseWrap": "never",
+    "singleQuote": true,
+    "printWidth": 120
   },
   "jest": {
-  "moduleFileExtensions": [
-    "ts",
-    "js",
-    "json"
-  ],
-  "moduleNameMapper": {
-    "^@/(.*)$": "<rootDir>/src/$1"
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/test/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/reports/coverage"
   },
-  "transform": {
-    "^.+\\.(t|j)s$": "ts-jest"
-  },
-  "collectCoverageFrom": [
-    "<rootDir>/src/**/*.ts"
-  ],
-  "testMatch": [
-    "<rootDir>/test/**/*.test.ts"
-  ],
-  "testEnvironment": "node",
-  "collectCoverage": true,
-  "coverageDirectory": "<rootDir>/reports/coverage"
-}
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "dist",
+            "docs",
+            "package.json",
+            "README.md",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
 }
