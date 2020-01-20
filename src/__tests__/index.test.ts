@@ -1,4 +1,4 @@
-import { HttpHeaders,HttpStatus } from '../';
+import { HttpHeaders, HttpStatus, HttpRequestMethod } from '../';
 
 describe('http core constants', () => {
   it('# should all headers as string', () => {
@@ -16,6 +16,15 @@ describe('http core constants', () => {
     statuses.forEach((status) => {
       expect(HttpStatus[status]).toBeDefined();
       expect(typeof HttpStatus[status]).toEqual('number');
+    });
+  });
+
+  it('# should all methods as string', () => {
+    const methods = Object.keys(HttpRequestMethod);
+
+    methods.forEach((method) => {
+      expect(HttpRequestMethod[method]).toBeDefined();
+      expect(typeof HttpRequestMethod[method]).toEqual('string');
     });
   });
 });
