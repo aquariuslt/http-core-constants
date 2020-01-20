@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "./lib",
+    "baseUrl": "./",
+    "incremental": true,
+    "noImplicitAny": false,
+    "allowJs": true
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "test",
+    "reports"
+  ]
+}
