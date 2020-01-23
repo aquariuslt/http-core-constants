@@ -10,6 +10,6 @@ Provide http-constants: (standard)headers and status code from java version `org
 import { HttpHeaders, HttpStatus, HttpRequestMethod } from 'http-core-constants';
 
 console.log(HttpHeaders.ACCEPT); // output: Accept
-console.log(HttpStatus.OK); // output: 200
+console.log(HttpStatus.SC_OK); // output: 200
 console.log(HttpRequestMethod.GET); // output: GET
 ```

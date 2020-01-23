@@ -27,4 +27,9 @@ describe('http core constants', () => {
       expect(typeof HttpRequestMethod[method]).toEqual('string');
     });
   });
+
+
+  it('# should read http status code with `SC` prefix',()=>{
+    expect(HttpStatus.SC_OK).toEqual(200);
+  })
 });
