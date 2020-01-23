@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/aquariuslt/http-core-constants/compare/v1.1.0...v1.1.1) (2020-01-23)
+
+
+### Bug Fixes
+
+* update typo for `HttpStatus.SC_OK` ([08302bd](https://github.com/aquariuslt/http-core-constants/commit/08302bdc50ff3d1ba7e6b9dc2720c2ccfabbe5ef))
+
 # [1.1.0](https://github.com/aquariuslt/http-core-constants/compare/v1.0.0...v1.1.0) (2020-01-20)
 
 
