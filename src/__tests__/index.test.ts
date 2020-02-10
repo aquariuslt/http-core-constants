@@ -28,8 +28,11 @@ describe('http core constants', () => {
     });
   });
 
-
-  it('# should read http status code with `SC` prefix',()=>{
+  it('# should read http status code with `SC` prefix', () => {
     expect(HttpStatus.SC_OK).toEqual(200);
-  })
+  });
+
+  it('# should read http status code without `SC` prefix', () => {
+    expect(HttpStatus.OK).toEqual(200);
+  });
 });
