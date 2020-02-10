@@ -9,7 +9,8 @@ Provide http-constants: (standard)headers and status code from java version `org
 ```typescript
 import { HttpHeaders, HttpStatus, HttpRequestMethod } from 'http-core-constants';
 
-console.log(HttpHeaders.ACCEPT); // output: Accept
-console.log(HttpStatus.SC_OK); // output: 200
+console.log(HttpHeaders.ACCEPT);    // output: Accept
+console.log(HttpStatus.SC_OK);      // output: 200 (constants with `SC` prefix same as apache core constants)
+console.log(HttpStatus.OK);         // output: 200
 console.log(HttpRequestMethod.GET); // output: GET
 ```
