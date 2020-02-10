@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/aquariuslt/http-core-constants/compare/v1.1.1...v1.2.0) (2020-02-10)
+
+
+### Features
+
+* add constants name without `SC(StatusCode)` prefix in HttpStatus ([5c46ede](https://github.com/aquariuslt/http-core-constants/commit/5c46ede198c212e3c8fc36468cd6f449dad15a53))
+
 ## [1.1.1](https://github.com/aquariuslt/http-core-constants/compare/v1.1.0...v1.1.1) (2020-01-23)
 
 

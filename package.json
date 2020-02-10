@@ -1,6 +1,6 @@
 {
   "name": "http-core-constants",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "http-core constants typescript/javascript version (from apache http-components:httpcore)",
   "main": "dist/index.js",
   "repository": "https://github.com/aquariuslt/http-core-constants",
