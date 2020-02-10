@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/aquariuslt/http-core-constants/compare/v1.2.0...v1.2.1) (2020-02-10)
+
+
+### Bug Fixes
+
+* remove declarations file ([76a4558](https://github.com/aquariuslt/http-core-constants/commit/76a45587f4ca6571960a79e049a4191844aae12b))
+
 # [1.2.0](https://github.com/aquariuslt/http-core-constants/compare/v1.1.1...v1.2.0) (2020-02-10)
 
 
