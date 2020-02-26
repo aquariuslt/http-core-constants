@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/aquariuslt/http-core-constants/compare/v1.2.1...v1.3.0) (2020-02-26)
+
+
+### Features
+
+* convert to enum declaration ([4ae2a2f](https://github.com/aquariuslt/http-core-constants/commit/4ae2a2f1b86de51b9406d67fa68334076eb756f7))
+
 ## [1.2.1](https://github.com/aquariuslt/http-core-constants/compare/v1.2.0...v1.2.1) (2020-02-10)
 
 
