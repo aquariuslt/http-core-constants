@@ -15,8 +15,10 @@ describe('http core constants', () => {
 
     statuses.forEach((status) => {
       expect(HttpStatus[status]).toBeDefined();
-      expect(typeof HttpStatus[status]).toEqual('number');
     });
+
+    expect(HttpStatus.OK).toEqual(200);
+    expect(HttpStatus.SC_OK).toEqual(200);
   });
 
   it('# should all methods as string', () => {
