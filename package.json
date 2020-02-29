@@ -14,8 +14,10 @@
     "constants"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
     "test": "jest",
+    "test:cov": "jest --coverage",
     "release": "semantic-release"
   },
   "devDependencies": {
@@ -82,7 +84,6 @@
       "<rootDir>/src/__tests__/*.test.ts"
     ],
     "testEnvironment": "node",
-    "collectCoverage": true,
     "coverageDirectory": "<rootDir>/reports/coverage"
   },
   "release": {
