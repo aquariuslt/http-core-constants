@@ -21,7 +21,8 @@
     "release": "semantic-release"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.ts"
   ],
   "devDependencies": {
     "@types/jest": "25.1.4",
