@@ -41,7 +41,7 @@
     "prettier": "2.0.5",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
-    "semantic-release": "17.0.6"
+    "semantic-release": "17.0.7"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
